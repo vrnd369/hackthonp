@@ -1,0 +1,577 @@
+.prizesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.mainPrizes {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.prizeCard {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 2.5px solid transparent;
+  border-radius: 2rem;
+  background: rgba(30, 30, 30, 0.92);
+  box-shadow: 0 4px 32px rgba(102, 126, 234, 0.1);
+  padding: 1.5rem 2rem 1.3rem 2rem;
+  min-width: 340px;
+  max-width: 400px;
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.prizeGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.prizeCard:hover .prizeGlow {
+  opacity: 1;
+}
+
+.prizeFirst {
+  border-color: #ffe066;
+}
+
+.prizeSecond {
+  border-color: #cfcfd8;
+}
+
+.prizeThird {
+  border-color: #eab676;
+}
+
+.prizeRank {
+  font-size: 5rem;
+  margin-bottom: 0.7rem;
+  display: block;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.35));
+}
+
+.prizeCard h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+  color: #fff;
+  font-weight: 800;
+}
+
+.prizeAmount {
+  font-size: 3.2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.3rem;
+  line-height: 1;
+}
+
+.prizeBonus {
+  color: #d1d5db;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prizeFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+  margin-top: 0.1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #232323;
+  border-radius: 1rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+
+.feature span {
+  font-size: 1.3em;
+  display: inline-block;
+}
+
+/* Feature icon colors */
+.prizeFirst .feature span {
+  color: #ffe066;
+}
+.prizeSecond .feature span {
+  color: #cfcfd8;
+}
+.prizeThird .feature span {
+  color: #eab676;
+}
+
+.additionalPrizes {
+  display: flex;
+  justify-content: center;
+}
+
+.additionalPrizes .card {
+  text-align: center;
+  max-width: 500px;
+  border: 1.5px solid rgba(102, 126, 234, 0.3);
+  margin: 0 auto;
+  background: rgba(40, 40, 60, 0.7);
+}
+
+.additionalPrizes h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.additionalPrizes p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.finalistPerks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem 1rem;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.perk {
+  padding: 0.8rem 1.7rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+  border: 1.5px solid #23234a;
+  background: #23234a;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+  color: inherit;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.perkIcon {
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.certificate {
+  color: #a5b4fc;
+}
+
+.showcase {
+  color: #38bdf8;
+}
+
+.community {
+  color: #a78bfa;
+}
+
+/* Layout: two badges on first row, one centered below */
+.finalistPerks {
+  flex-wrap: wrap;
+}
+.finalistPerks .perk:nth-child(1),
+.finalistPerks .perk:nth-child(2) {
+  flex: 1 1 45%;
+  max-width: 260px;
+}
+.finalistPerks .perk:nth-child(3) {
+  flex-basis: 100%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.allParticipants {
+  background: rgba(16, 185, 129, 0.1);
+  border: 2.5px solid #10b981;
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px rgba(16, 185, 129, 0.1);
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  margin: 2.5rem 0;
+  max-width: 95vw;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.participantsHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.participantsHeader h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.participantsCount {
+  color: #10b981;
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin-bottom: 0;
+}
+
+.benefitsGrid {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.benefitItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: rgba(30, 40, 35, 0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px rgba(16, 185, 129, 0.1);
+  border: 1.5px solid rgba(16, 185, 129, 0.18);
+  min-width: 320px;
+  max-width: 370px;
+  flex: 1 1 320px;
+  margin: 0 auto;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.benefitItem:hover {
+  background: rgba(30, 40, 35, 0.95);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.18);
+  transform: translateY(-4px) scale(1.025);
+}
+
+.benefitEmoji {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.benefitTitle {
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.benefitDesc {
+  color: #b5c2bc;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.prizeTotal {
+  text-align: center;
+}
+
+.totalCard {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: center;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.05) 100%
+  );
+}
+
+.totalAmount {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.totalLabel {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.totalDesc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+.prizesHeading {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+.section-description {
+  color: #cfcfd8;
+  font-size: 1.45rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  line-height: 1.3;
+  font-weight: 500;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.animateOnScroll.animateIn .prizesHeading {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.animateOnScroll.animateIn .prizesHeading {
+  animation: bounceIn 1.5s ease-out forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .finalistPerks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prizeAmount {
+    font-size: 2.5rem;
+  }
+
+  .totalAmount {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainPrizes,
+  .benefitsGrid {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100vw;
+    align-items: center;
+  }
+  .prizeCard,
+  .benefitItem {
+    min-width: 0 !important;
+    width: 96vw !important;
+    max-width: 96vw !important;
+    margin: 0 auto 1.5rem auto !important;
+    padding: 0.7rem 0.3rem 1.1rem 0.3rem !important;
+    font-size: 0.92rem !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    border-radius: 0.8rem !important;
+    border-width: 1px !important;
+  }
+  .prizesHeading {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .section-description {
+    font-size: 0.98rem !important;
+    margin-bottom: 0.7rem !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+    line-height: 1.4 !important;
+    word-break: break-word !important;
+  }
+  .prizeCard h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.15rem !important;
+  }
+  .prizeAmount {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.15rem !important;
+  }
+  .prizeBonus {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .feature {
+    font-size: 0.93rem !important;
+    padding: 0.4rem 0.5rem !important;
+    border-radius: 0.5rem !important;
+  }
+  .totalCard {
+    padding: 0.8rem 0.2rem !important;
+    margin-bottom: 1rem !important;
+    max-width: 96vw !important;
+  }
+  .finalistPerks {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.7rem !important;
+  }
+  .finalistPerks .perk {
+    width: 100% !important;
+    max-width: 350px !important;
+    min-width: 0 !important;
+    margin: 0.3rem auto !important;
+    flex-basis: auto !important;
+    justify-content: center !important;
+    display: flex !important;
+  }
+}
+
+.prizesSection {
+  padding: 6rem 0;
+}
+
+.finalistsCard {
+  background: rgba(40, 40, 60, 0.85);
+  border: 1.5px solid rgba(102, 126, 234, 0.18);
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px rgba(102, 126, 234, 0.08);
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.finalistsCard:hover {
+  box-shadow: 0 8px 40px rgba(124, 58, 237, 0.18),
+    0 2px 8px rgba(102, 126, 234, 0.1);
+  transform: translateY(-4px) scale(1.025);
+}
+
+.finalistsCard:hover .prizeGlow {
+  opacity: 1;
+}
+
+.finalistsHeading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.finalistsDesc {
+  color: #cfcfd8;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
+
+.textCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prizesHeadingAnimated {
+  opacity: 0;
+  transform: translateY(-60px) scale(0.8);
+  animation: bounceInDown 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px) scale(1.05);
+  }
+  80% {
+    transform: translateY(-10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .prizesSection {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
