@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             <span className="emoji">🗓</span>
             <div className={styles.metaContent}>
               <span className={styles.metaLabel}>Date</span>
-              <span className={styles.metaValue}>July 25–26, 2025</span>
+              <span className={styles.metaValue}>August 22-23,2025</span>
             </div>
           </div>
           <div className={`${styles.metaItem} interactive-card`}>
